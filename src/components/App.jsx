@@ -53,7 +53,9 @@ export class App extends Component {
 
   viewContacts = () => {
     const { contacts, filter } = this.state;
-    return contacts.filter(cont => cont.name.toLowerCase().includes(filter));
+    if (contacts) {
+      return contacts.filter(cont => cont.name.toLowerCase().includes(filter));
+    }    
   };
 
   deleteContact = id => {
