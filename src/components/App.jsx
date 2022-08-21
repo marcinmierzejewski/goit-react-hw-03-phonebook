@@ -55,6 +55,8 @@ export class App extends Component {
     const { contacts, filter } = this.state;
     if (contacts) {
       return contacts.filter(cont => cont.name.toLowerCase().includes(filter));
+    } else {
+      return []
     }    
   };
 
