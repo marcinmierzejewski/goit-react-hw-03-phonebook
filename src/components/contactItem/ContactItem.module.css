@@ -1,0 +1,39 @@
+.contactItem {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.contactName {
+  display: inline-block;
+  
+}
+.btn {
+  height: 20px;
+  padding: 2px 10px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 10px;
+  color: red;
+  letter-spacing: 0.04em;
+  background-color: transparent;
+  border: 1px solid rgba(188, 184, 184, 0.989);
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 3px;
+}
+
+.btn:hover {
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}
+
+.btn:first-child{
+  margin-right: 5px;
+  color: green;
+}
+
+.btn:first-child:hover{
+  border: 1px solid green;
+  background-color: green;
+  color: white;
+}
