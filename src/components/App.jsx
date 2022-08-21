@@ -46,7 +46,9 @@ export class App extends Component {
   };
 
   searchByName = e => {
-    this.setState({ filter: e.target.value.toLowerCase() });
+    if (e.target.value !== null) {
+      this.setState({ filter: e.target.value.toLowerCase() });
+    }    
   };
 
   viewContacts = () => {
