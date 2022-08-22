@@ -15,9 +15,15 @@ export const INITIAL_STATE = {
 export class App extends Component {
   componentDidMount = () => {
     let loadValues = JSON.parse(localStorage.getItem('LOCALSTORAGE_KEY'));
-    this.setState({
-      contacts: loadValues,
-    });
+    if (loadValues === null) {
+      this.setState({
+        contacts: [],
+      });
+    } else {
+      this.setState({
+        contacts: loadValues,
+      });
+    }
   };
 
   componentDidUpdate = () => {
@@ -46,18 +52,13 @@ export class App extends Component {
   };
 
   searchByName = e => {
-    if (e.target.value !== null) {
-      this.setState({ filter: e.target.value.toLowerCase() });
-    }    
+    this.setState({ filter: e.target.value.toLowerCase() });
   };
 
   viewContacts = () => {
     const { contacts, filter } = this.state;
-    if (contacts) {
-      return contacts.filter(cont => cont.name.toLowerCase().includes(filter));
-    } else {
-      return []
-    }    
+
+    return contacts.filter(cont => cont.name.toLowerCase().includes(filter));
   };
 
   deleteContact = id => {
