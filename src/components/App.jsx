@@ -71,7 +71,7 @@ export class App extends Component {
     const { wrapper } = styles;
     return (
       <div className={wrapper}>
-        <h1 style={{ textAlign: 'center' }}>React homework 2 phonebook</h1>
+        <h1 style={{ textAlign: 'center' }}>React homework 3 phonebook</h1>
         <Section title="Phonebook">
           <PhoneBook newContact={this.addNewContact} />
         </Section>
